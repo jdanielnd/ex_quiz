@@ -9,6 +9,11 @@ defmodule ExQuiz.Application do
     children = [
       # Starts a worker by calling: ExQuiz.Worker.start_link(arg)
       # {ExQuiz.Worker, arg}
+      Plug.Cowboy.child_spec(
+        scheme: :http,
+        plug: ExQuiz.Endpoint,
+        options: [port: 4001]
+      )
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
