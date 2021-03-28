@@ -14,7 +14,7 @@ defmodule ExQuiz.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :plug_cowboy],
+      extra_applications: [:logger, :plug_cowboy, :sqlite_ecto2, :ecto],
       mod: {ExQuiz.Application, []}
     ]
   end
@@ -24,6 +24,7 @@ defmodule ExQuiz.MixProject do
     [
       {:plug_cowboy, "~> 2.0"},
       {:poison, "~> 3.1"},
+      {:sqlite_ecto2, "~> 2.2"},
     ]
   end
 end
