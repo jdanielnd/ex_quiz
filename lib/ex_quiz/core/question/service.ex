@@ -3,8 +3,8 @@ defmodule ExQuiz.Core.Question.Service do
   
   import Ecto.Query
   
-  def create(text, type) do
-    question = %ExQuiz.Core.Question{text: text, type: type}
+  def create(params) do
+    question = %ExQuiz.Core.Question{text: params["text"], type: params["type"]}
     question |> DB.insert()
   end
 
