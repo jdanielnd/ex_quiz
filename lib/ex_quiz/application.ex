@@ -13,7 +13,8 @@ defmodule ExQuiz.Application do
         scheme: :http,
         plug: ExQuiz.Web.Endpoint,
         options: [port: 4001]
-      )
+      ),
+      ExQuiz.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
