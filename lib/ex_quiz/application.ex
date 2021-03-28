@@ -14,7 +14,7 @@ defmodule ExQuiz.Application do
         plug: ExQuiz.Web.Endpoint,
         options: [port: 4001]
       ),
-      ExQuiz.Repo
+      ExQuiz.Core.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
