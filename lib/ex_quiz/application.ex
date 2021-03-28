@@ -11,7 +11,7 @@ defmodule ExQuiz.Application do
       # {ExQuiz.Worker, arg}
       Plug.Cowboy.child_spec(
         scheme: :http,
-        plug: ExQuiz.Endpoint,
+        plug: ExQuiz.Web.Endpoint,
         options: [port: 4001]
       )
     ]
